@@ -1,1 +1,2 @@
 Just a simple file
+Changing the file comment from GitHub
