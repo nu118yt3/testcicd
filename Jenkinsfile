@@ -7,7 +7,7 @@ pipeline {
              }
              post {
                  always {
-                     jiraSendBuildInfo site: 'txmglobal.atlassian.net'
+                     jiraSendBuildInfo site: 'txmglobal.atlassian.net', buildNumber: BUILD_NUMBER, buildDisplayName: BUILD_DISPLAY_NAME, buildUrl: BUILD_URL
                  }
              }
          }
