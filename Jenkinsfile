@@ -1,15 +1,15 @@
 pipeline {
-    agent any
-
-    stages {
-        stage('Hello') {
-            steps {
-                jiraComment body: 'Message from GitHub', issueKey: 'TIS-1'
-            }
-            post {
+     agent any
+     stages {
+         stage('Build') {
+             steps {
+                 jiraComment body: 'Message from GitHub', issueKey: 'TIS-1'
+             }
+             post {
                  always {
                      jiraSendBuildInfo 
                  }
-        }
-    }
-}
+             }
+         }
+     }
+ }
